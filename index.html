@@ -33,11 +33,63 @@
 
 <!-- END Lightbox CODE -->
 
+<!-- Script to stop Right Click on side -->
+
+<script language=JavaScript>
+<!--
+
+//Disable right mouse click Script
+//By Maximus (maximus@nsimail.com) w/ mods by DynamicDrive
+//For full source code, visit http://www.dynamicdrive.com
+
+var message="Function Disabled!";
+
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+// END OF ANTI RIGHT CLICK--> 
+</script>
+
 <!-- REVOLUTION SLIDER CSS SETTINGS -->
 <link href="revolution_slider.css" rel="stylesheet" type="text/css">
 <!-- ****** faviconit.com favicons ****** -->
 <link rel="icon" href="FuchsLogo.png" type="image/png">
 <!-- ****** faviconit.com favicons ****** -->
+
+<script src="//www.google-analytics.com/analytics.js" async=""></script><script><!--Google Analytics code -->
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20106693-1', 'lucyconklin.com');
+  ga('send', 'pageview');
+
+</script><!--end analytics code-->
 
 </head>
 
@@ -204,7 +256,7 @@
 			</div>
 
 			<div class="span6">
-				<p>I grew up in a house full of creativity and science where I started drawing, painting, and taking photographs before I even attended school. Nature was always the main influence on my artwork. After leaving school I started a dual Bachelor in Biology and Art. Following my Master in Science, I worked as a research assistant in projects and with different species all around the world and was thoroughly impressed and influenced by the beauty of the animals and landscapes. My scientific training also impacted the techniques in my artwork: I am focused on details, distinctive shapes and colours, and fundamental concepts of science (such as order and chaos, perception, or mimicry) are often part of my work. Just recently, I moved to St Andrews to do a PhD in dolphin behaviour, cognition, and communication. As a balance to my research, I love being involved in public outreach and science communication.</p>
+				<p>I grew up in a house full of creativity and science where I started drawing, painting, and taking photographs before I even attended school. Nature was always the main influence on my artwork. After leaving school I started a dual Bachelor in Biology and Art. After graduating I worked as a research assistant in projects and with different species all around the world and was thoroughly impressed and influenced by the beauty of the animals and landscapes. My scientific training also impacted the techniques in my artwork: I am focused on details, distinctive shapes and colours, and fundamental concepts of science (such as order and chaos, perception, or mimicry) are often part of my work. Just recently, I moved to St Andrews to do a PhD in dolphin behaviour, cognition, and communication. As a balance to my research, I love being involved in public outreach and science communication.</p>
 				<p><strong>I am currently available for commissions, please get in touch if you are interested!</strong></p>
 			</div><!--span6-->
 
@@ -351,5 +403,8 @@
 <!-- End Lightbox code -->
 
 
+<<<<<<< HEAD
 </body></html>
-
+=======
+</body></html>
+>>>>>>> origin/gh-pages
